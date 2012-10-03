@@ -1,1 +1,1 @@
-<?php echo "echo";
+<?php the_content(); ?>
