@@ -9,7 +9,12 @@ body { }
 /* =============================================================================
    Header
    ========================================================================== */
-
+.navbar .brand {
+  background: url(../img/logo.jpg) no-repeat;
+  width: 216px;
+  height: 62px;
+  text-indent: -999px;
+}
 #banner { }
 
 /* Fixed Topbar Navigation */
@@ -31,8 +36,20 @@ body.admin-bar .navbar-fixed-top { top: 28px; }
    ========================================================================== */
 
 #main { }
-
-
+#testimonials-slider {
+  background: url('../img/testimonials.png') no-repeat;
+  width: 303px;
+  height: 309px;
+}
+#testimonials-slider .item {float: left;}
+.carousel-inner {
+position: relative;
+width: 100%;
+overflow: hidden;
+padding-top: 100px;
+padding-left: 50px;
+text-align: center;
+}
 
 /* ==========================================================================
    Sidebar
