@@ -80,3 +80,5 @@ function register_shortcodes() {
 add_action( 'init', 'register_shortcodes');
 add_shortcode('slider','insert_image_slider');
 
+add_shortcode('testimonials', 'display_testimonials');
+
