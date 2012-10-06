@@ -47,7 +47,7 @@ function get_image_slider() {
   {
     while (have_posts()) {
        the_post();
-       $img= get_the_post_thumbnail( $post->ID, 'large' );       
+       $img= get_the_post_thumbnail( the_ID(), 'large' );       
        $image_slider.= '<div class="item">'.$img .'</div>';
     }
   }
@@ -76,9 +76,10 @@ function image_slider() {
 
 function register_shortcodes() {
    add_shortcode('recent-posts', 'get_recent_posts');
-}
-add_action( 'init', 'register_shortcodes');
-add_shortcode('slider','insert_image_slider');
+   add_shortcode('slider','insert_image_slider');
 
 add_shortcode('testimonials', 'display_testimonials');
+}
+add_action( 'init', 'register_shortcodes');
+
 
