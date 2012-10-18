@@ -16,20 +16,18 @@ function get_recent_posts()	{
 			'order'=>'DESC',
 			'showposts'=>3,			
 		);
-	$return_string='<ul>';
+	$return_string='<div class="post">';
 	query_posts($args);	
 	if(have_posts())
 	{
-		
+	   echo "<div>";
 		while(have_posts())
 		{
 			the_post();
-			
-			$return_string.='<li><a href="'.get_permalink().'">'.get_the_title().'</a>';
-      $return_string.='<p class="desc">'.the_excerpt().'</p></li>';
+			include(get_template_directory().'/lib/shortcodes/recent-posts.php');			
 		}
 	}
-	$return_string.='</ul>';
+	echo '</div>';
 	wp_reset_query();
 	return $return_string;
 	
