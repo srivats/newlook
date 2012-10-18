@@ -25,7 +25,8 @@ function get_recent_posts()	{
 		{
 			the_post();
 			
-			$return_string.='<li><a href="'.get_permalink().'">'.get_the_title().'</a></li>';			
+			$return_string.='<li><a href="'.get_permalink().'">'.get_the_title().'</a>';
+      $return_string.='<p class="desc">'.the_excerpt().'</p></li>';
 		}
 	}
 	$return_string.='</ul>';
