@@ -60,28 +60,19 @@ add_action('wp_insert_post', 'set_testimonial_custom_fields');
 
 function display_testimonials() {
   
-  $testimonials_slider = '<div id="testimonials-slider" class="testimonials-carousel carousel slide">
-                  <div class="carousel-inner">';
   $testimonials_query = 'post_type=testimonials';
   query_posts($testimonials_query);
+  echo '<div id="testimonials-slider" class="testimonials-carousel carousel slide"><div class="carousel-inner">';
+  
   if (have_posts())
   {
     while(have_posts())
     {
-	  the_post();
-	  $client_name = get_post_meta(get_the_ID(), 'Client Name', true);
-	  $website_link = get_post_meta(get_the_ID(),'Website',true);
-	  $testimonials_slider.= '<div class="item">';
-	  $testimonials_slider.= '<div>'.get_the_content().'</div>';
-	  $testimonials_slider.='<div class="client-name">'.$client_name.'</div>';
-	  $testimonials_slider.='<div class="website-link"><a href="http://'.$website_link.'" rel="nofollow">'.$website_link.'</a></div>';
-	  // $testimonials_slider.='</div>';
-	  // $testimonials_slider.='<a class="carousel-control left" href="#testimonials-slider" data-slide="prev">&lsaquo;</a>';
-	  // $testimonials_slider.='<a class="carousel-control right" href="#testimonials-slider" data-slide="next">&rsaquo;</a>';
-	  $testimonials_slider.='</div>';
-	}
+	    the_post();
+	    include(get_template_directory().'/lib/shortcodes/testimonials.php');
+	  }
   }
-  $testimonials_slider.='</div></div>';
+  echo '</div></div>';
   return $testimonials_slider;
 }
 
