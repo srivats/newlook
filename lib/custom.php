@@ -16,20 +16,20 @@ function get_recent_posts()	{
 			'order'=>'DESC',
 			'showposts'=>3,			
 		);
-	$return_string='<div class="post">';
 	query_posts($args);	
 	if(have_posts())
 	{
-	   echo "<div>";
+	   echo '<div class="span6 pull-left"><h3>Recent Posts</h3>';
+     echo '<ul class="related-posts">';
 		while(have_posts())
 		{
 			the_post();
 			include(get_template_directory().'/lib/shortcodes/recent-posts.php');			
 		}
+   
 	}
-	echo '</div>';
+	 echo '</ul></div>';
 	wp_reset_query();
-	return $return_string;
 	
 }
 /**
@@ -37,7 +37,7 @@ function get_recent_posts()	{
  */
 
 function get_image_slider() {
-  $image_slider = '<div id="image-slider" class="image-carousel carousel slide">
+  $image_slider = '<div id="image-slider" class="image-carousel carousel slide clearfix">
                   <div class="carousel-inner">';
   $slider_query = 'post_type=image-slider';
 
