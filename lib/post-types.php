@@ -62,7 +62,7 @@ function display_testimonials() {
   
   $testimonials_query = 'post_type=testimonials';
   query_posts($testimonials_query);
-  echo '<div id="testimonials-slider" class="testimonials-carousel carousel slide"><div class="carousel-inner">';
+  echo '<div id="testimonials-slider" class="pull-left testimonials-carousel carousel slide"><div class="carousel-inner clearfix">';
   
   if (have_posts())
   {
