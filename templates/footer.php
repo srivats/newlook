@@ -15,7 +15,7 @@
 	<li><a href="#">Contact Us</a></li>
   </ul>	
 
-
+<div id="tweets"></div>
 </footer>
 
 <?php if (GOOGLE_ANALYTICS_ID) : ?>
