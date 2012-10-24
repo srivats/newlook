@@ -14,24 +14,38 @@ function get_recent_posts()	{
 	$args=array(
 			'orderby'=>'date',
 			'order'=>'DESC',
-			'showposts'=>3,			
+			'showposts'=>3,
+      'echo'=>0
 		);
 	query_posts($args);	
 	if(have_posts())
 	{
+    ob_start();
 	   echo '<div class="span6 pull-left"><h3>Recent Posts</h3>';
-     echo '<ul class="related-posts">';
+     echo  '<ul class="related-posts">';
+     
 		while(have_posts())
 		{
 			the_post();
-			include(get_template_directory().'/lib/shortcodes/recent-posts.php');			
+			$return=include(get_template_directory().'/lib/shortcodes/recent-posts.php');			
+     // $return.='<li>';
+     // $return.='<div class="meta pull-left">';
+     // $return.='<span class="date">'. the_time('d') .'</span><br>';
+     // $return.='<span class="month">'. the_time('M').'</span>';
+     // $return.='<a href="'.get_permalink().'">'. get_the_title().'</a>';
+     // $return.='<p>'.the_excerpt().'</p>';
+     // $return.='</div></li>';
+     // $return.='</div><div>';
 		}
    
 	}
-	 echo '</ul></div>';
-	wp_reset_query();
-	
+	 echo  '</ul></div>';
+   $return=ob_get_clean();
+   
+   wp_reset_query();
+   return $return; 
 }
+
 /**
  * Display slider
  */
