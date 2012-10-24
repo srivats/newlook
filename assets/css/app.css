@@ -105,3 +105,8 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
   float: right;
   margin-top: 20px;
 }
+
+/*** misc ***/
+.clearer{
+  clear: both;
+}
