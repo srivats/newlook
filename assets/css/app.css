@@ -110,3 +110,17 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 .clearer{
   clear: both;
 }
+
+/************** Home Page *************/
+.navbar .brand{
+  margin-left: 0px;
+}
+.navbar-inner .container{
+  width: 962px;
+  margin: 0px auto;
+}
+#wrap{
+  width: 962px;
+  margin: 0px auto;
+  margin-top: 20px;
+}
