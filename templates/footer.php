@@ -1,6 +1,5 @@
 <footer id="content-info" class="container" role="contentinfo">
-  <?php dynamic_sidebar('sidebar-footer'); ?>
-  <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?></p>
+  <?php dynamic_sidebar('sidebar-footer'); ?>  
   <h3>Services</h3>
   <ul class="pull-left">
   	<li><a href="#">Website Design</a></li>
@@ -17,6 +16,7 @@
   </ul>	
 <h3>Recent Tweets</h3>
 <div id="tweets" class="pull-left"></div>
+<p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?></p>
 </footer>
 
 <?php if (GOOGLE_ANALYTICS_ID) : ?>
