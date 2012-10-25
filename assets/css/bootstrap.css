@@ -45,3 +45,6 @@
 .span1 {
   width: 70px;
 }
+[class*="span"] {
+	margin-left: 10px;
+}
