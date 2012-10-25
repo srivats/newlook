@@ -124,3 +124,21 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
   margin: 0px auto;
   margin-top: 20px;
 }
+#main h1{
+  background: url(../img/h1_bg.jpg) no-repeat;
+  width: 960px;
+  height: 86px;
+  line-height: 90px;
+}
+#main h1 span{
+  color: red;
+}
+#main h3{
+  background: url(../img/what_we_do.jpg) no-repeat;
+  width: 960px;
+  height: 46px;
+  line-height: 57px;
+}
+.row .span4 h2 span{
+  color: red;
+}
