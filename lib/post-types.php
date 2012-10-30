@@ -62,7 +62,7 @@ function display_testimonials() {
   
   $testimonials_query = 'post_type=testimonials';
   query_posts($testimonials_query);
-  $testimonials_slider= '<div id="testimonials-slider" class="pull-left testimonials-carousel carousel slide"><div class="carousel-inner clearfix">';
+  $testimonials_slider= '<div id="testimonials-slider" class="pull-left testimonials-carousel carousel slide span3"> <h3>Testimonials</h3> <div class="carousel-inner clearfix">';
   
   if (have_posts())
   {
@@ -74,13 +74,13 @@ function display_testimonials() {
   $website_link = get_post_meta(get_the_ID(),'Website',true);
       $testimonials_slider.= '<div class="item">';
       $testimonials_slider.= '<div>'.get_the_content().'</div>';
-      $testimonials_slider.='<div class="client-name">'.$client_name.'</div>';
-      $testimonials_slider.='<div class="website-link"><a href="http://'.$website_link.'" rel="nofollow">'.$website_link.'</a></div>';
+      $testimonials_slider.='<div class="client-link"><div class="client-name">'.$client_name.'</div>';
+      $testimonials_slider.='<div class="website-link"><a href="http://'.$website_link.'" rel="nofollow">'.$website_link.'</a></div></div>';
       $testimonials_slider.='</div>';
       
 	  }
   }
-  $testimonials_slider.= '</div></div>';
+  $testimonials_slider.= '</div></div> <div class="clearer"></div>';
   return $testimonials_slider;
 }
 
