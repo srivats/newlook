@@ -36,12 +36,18 @@ body.admin-bar .navbar-fixed-top { top: 28px; }
    ========================================================================== */
 
 #main { }
-#testimonials-slider {
-  background: url('../img/testimonials.png') no-repeat;
-  width: 303px;
-  height: 309px;
+#testimonials-slider .carousel-inner{
+  background: url('../img/test_bg.jpg') no-repeat;
+  height: 319px;
+  width: 300px !important;
 }
-#testimonials-slider .item {float: left;}
+#testimonials-slider .item {float: left;
+  width: 220px;
+  padding: 90px 0px 0px 40px;
+}
+#testimonials-slider .client-link{
+  padding-top: 40px;
+}
 .carousel-inner {
 position: relative;
 width: 100%;
@@ -139,6 +145,65 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
   height: 46px;
   line-height: 57px;
 }
+#main .row .span4{
+  margin-left: 0px !important;
+}
+#main .row .span4 p{
+  padding: 0px 10px !important;
+}
 .row .span4 h2 span{
   color: red;
+}
+footer.container{
+  background: url(../img/footer_bg.jpg) repeat-x;
+  height: 370px;
+  width:100%;
+}
+footer .footer-content{
+  width: 960px;
+  margin: 0px auto;
+  padding-top: 20px;
+}
+footer .footer-content .span3{
+  height: 250px;
+}
+.footer-copyright{
+  padding-top: 15px;
+  color: #ffffff;
+  padding-top: 35px;
+}
+.footer-content .span3 ul{
+  list-style-type: none;
+}
+.footer-content .span3 li{
+  padding: 0px;
+  margin: 0px;
+}
+.footer-content .div1 li,.footer-content .div2 li,.footer-content .div4 li{
+  line-height: 30px;
+}
+.related-posts{
+  margin: 0px !important;
+}
+.recent-post h3{
+  background: url(../img/blog_title.jpg) no-repeat #ffffff!important;
+  height: 59px !important;
+  width:643px !important;
+}
+.related-posts li{
+  list-style-type: none;
+}
+.related-posts .pull-left{
+  background: url(../img/blog_date_bg.jpg) no-repeat;
+  height: 96px;
+  width:85px;
+  text-align: center;
+  padding-top: 20px;
+  margin-right: 10px;
+  clear: both;
+}
+#testimonials-slider h3{
+  background: url(../img/testimonial.jpg) no-repeat #ffffff!important;
+  height: 59px !important;
+  width:317px !important;
 }
