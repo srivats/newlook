@@ -4,7 +4,7 @@
 
 body { }
 
-
+.center-text{ text-align: center;}
 
 /* =============================================================================
    Header
@@ -36,10 +36,11 @@ body.admin-bar .navbar-fixed-top { top: 28px; }
    ========================================================================== */
 
 #main { }
+
 #testimonials-slider .carousel-inner{
   background: url('../img/test_bg.jpg') no-repeat;
-  height: 319px;
-  width: 300px !important;
+  height: 313px;
+  width: 295px;
 }
 #testimonials-slider .item {float: left;
   width: 220px;
@@ -54,6 +55,8 @@ width: 100%;
 overflow: hidden;
 text-align: center;
 }
+
+
 
 /* ==========================================================================
    Sidebar
@@ -118,6 +121,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 }
 
 /************** Home Page *************/
+/*
 .navbar .brand{
   margin-left: 0px;
 }
@@ -202,8 +206,10 @@ footer .footer-content .span3{
   margin-right: 10px;
   clear: both;
 }
+
 #testimonials-slider h3{
   background: url(../img/testimonial.jpg) no-repeat #ffffff!important;
   height: 59px !important;
   width:317px !important;
 }
+*/
