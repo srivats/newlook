@@ -62,7 +62,7 @@ function display_testimonials() {
   
   $testimonials_query = 'post_type=testimonials';
   query_posts($testimonials_query);
-  $testimonials_slider= '<div id="testimonials-slider" class="pull-left testimonials-carousel carousel slide span3"> <h3>Testimonials</h3> <div class="carousel-inner clearfix">';
+  $testimonials_slider= '<div class="span4"><div id="testimonials-slider" class="pull-left testimonials-carousel carousel slide span3"> <h3>Testimonials</h3> <div class="carousel-inner clearfix">';
   
   if (have_posts())
   {
@@ -80,7 +80,7 @@ function display_testimonials() {
       
 	  }
   }
-  $testimonials_slider.= '</div></div> <div class="clearer"></div>';
+  $testimonials_slider.= '</div></div> </div><div class="clearer"></div>';
   return $testimonials_slider;
 }
 
