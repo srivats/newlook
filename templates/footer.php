@@ -1,7 +1,8 @@
 <footer id="content-info" class="container" role="contentinfo">
   <?php dynamic_sidebar('sidebar-footer'); ?>
-  <div class="footer-content">  
-    <div class="span3 div1">
+  <div class="footer-content">
+  <div class="row-fluid">
+    <div class="span3">
       <h3>Services</h3>
       <ul class="pull-left">
       	<li><a href="#">Website Design</a></li>
@@ -10,7 +11,7 @@
       	<li><a href="#">Brand Identity</a></li>  	
       </ul>
     </div>
-    <div class="span3 div2">
+    <div class="span3">
       <h3>Helpful Links</h3>
       <ul class="pull-left">    
     	<li><a href="#">About us</a></li>
@@ -20,11 +21,11 @@
     	<li><a href="#">Contact Us</a></li>
       </ul>	
     </div>
-    <div class="span3 div3">
+    <div class="span3">
       <h3>Recent Tweets</h3>
       <div id="tweets" class="pull-left"></div>
     </div>
-    <div class="span3 div4">
+    <div class="span3">
       <h3>Get Social</h3>
       <ul class="pull-left">    
       <li><a href="#">Follow us on Facebook</a></li>
@@ -32,8 +33,10 @@
       <li><a href="#">Call us from Skype</a></li>
       </ul> 
     </div>
+
     <div class="clearer"></div>
 <p class="footer-copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?></p>
+</div>
 </div>
 </footer>
 
