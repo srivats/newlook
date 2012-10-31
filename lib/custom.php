@@ -51,7 +51,7 @@ function get_recent_posts()	{
  */
 
 function get_image_slider() {
-  $image_slider = '<div id="image-slider" class="image-carousel carousel slide clearfix">
+  $image_slider = '<div class="row-fluid"><div class="span12"><div id="image-slider" class="image-carousel carousel slide clearfix">
                   <div class="carousel-inner">';
   $slider_query = 'post_type=image-slider';
 
@@ -66,8 +66,8 @@ function get_image_slider() {
   }
   wp_reset_query();
   
-  $image_slider.='</div>';
-  $image_slider.='</div>';
+  $image_slider.='</div></div></div></div>';
+  
   return $image_slider;
 }
 
