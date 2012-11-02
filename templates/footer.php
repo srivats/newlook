@@ -1,7 +1,7 @@
 <footer id="content-info" class="container" role="contentinfo">
   <?php dynamic_sidebar('sidebar-footer'); ?>
   <div class="footer-content">
-  <div class="row-fluid">
+  <div class="row">
     <div class="span3">
       <h3>Services</h3>
       <ul class="pull-left">
