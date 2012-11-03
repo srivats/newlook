@@ -15,15 +15,15 @@
     <div class="entry-content">
       <?php the_excerpt(); ?>
     </div>
-    <footer>
-      <?php the_tags('<ul class="entry-tags"><li>','</li><li>','</li></ul>'); ?>
+    <footer><span><?php echo _e('Tags') ?></span>
+      <?php the_tags('<ul class="entry-tags unstyled"><li>','</li><li>','</li></ul>'); ?>
     </footer>
   </article>
+  <hr />
 <?php endwhile; ?>
 
-<?php if ($wp_query->max_num_pages > 1) : ?>
-  <nav id="post-nav" class="pager">
-    <div class="previous"><?php next_posts_link(__('&larr; Older posts', 'roots')); ?></div>
-    <div class="next"><?php previous_posts_link(__('Newer posts &rarr;', 'roots')); ?></div>
-  </nav>
-<?php endif; ?>
+
+<?php //pagination ?>
+<?php if (function_exists("pagination")) {
+    pagination($additional_loop->max_num_pages);
+} ?>
