@@ -47,6 +47,9 @@
 // Quattrocento Sans
 @import url(http://fonts.googleapis.com/css?family=Quattrocento+Sans);
 
+//PT Sans Narrow 
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow);
+
 @sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
 @serifFontFamily:       Georgia, "Times New Roman", Times, serif;
 @monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
@@ -56,10 +59,12 @@
 @baseLineHeight:        20px;
 @altFontFamily:         @serifFontFamily;
 
-@headingsFontFamily:    'Quattrocento Sans', sans-serif; // empty to use BS default, @baseFontFamily
+@headingsFontFamily:    'Quattrocento Sans', @sansFontFamily; // empty to use BS default, @baseFontFamily
 @headingsFontWeight:    bold;    // instead of browser default, bold
 @headingsColor:         #676666; // empty to use BS default, @textColor
 
+
+@navbarFontFamily:		'PT Sans Narrow', @sansFontFamily;	
 // Tables
 // -------------------------
 @tableBackground:                   transparent; // overall background-color
@@ -165,7 +170,6 @@
 @navbarBackgroundHighlight:       #ffffff;
 @navbarBackground:                darken(@navbarBackgroundHighlight, 5%);
 @navbarBorder:                    darken(@navbarBackground, 12%);
-
 @navbarText:                      #777;
 @navbarLinkColor:                 #777;
 @navbarLinkColorHover:            @grayDark;
