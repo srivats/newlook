@@ -80,7 +80,7 @@ function display_testimonials() {
       
 	  }
   }
-  $testimonials_slider.= '</div></div> </div><div class="clearer"></div>';
+  $testimonials_slider.= '</div></div></div><div class="clearer"></div>';
   return $testimonials_slider;
 }
 
