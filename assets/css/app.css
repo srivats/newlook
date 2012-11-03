@@ -240,24 +240,75 @@ color: #f25c4f;
 #testimonials-slider .carousel-inner  .item div{
  text-shadow:2px 3px 3px #ffffff;
 }
-.recent-post {position: relative;}
+.recent-post,.what-we-do {position: relative;}
 .recent-post h3:after{
   content: "";  
-    display: block;  
-    border-top: solid 1px #bfbfbf; 
-    border-bottom: solid 1px #bfbfbf;  
-    width: 60%;  
-    height: 3px;  
-    position: absolute;  
-    top: 30px;  
-    z-index: 1;
-    right:81px;  
+  display: block;  
+  border-top: solid 1px #bfbfbf; 
+  border-bottom: solid 1px #bfbfbf;  
+  width: 75%;  
+  height: 3px;  
+  position: absolute;  
+  top: 30px;  
+  z-index: 1;
+  right:0px; 
 }
+#testimonials-slider h3:after {
+  content: "";  
+  display: block;  
+  border-top: solid 1px #bfbfbf; 
+  border-bottom: solid 1px #bfbfbf;  
+  width: 60%;  
+  height: 3px;  
+  position: absolute;  
+  top: 30px;  
+  z-index: 1;
+  left:150px; 
+}
+.what-we-do h2:before
+{
+  content: "";  
+  display: block;  
+  border-top: solid 1px #bfbfbf; 
+  border-bottom: solid 1px #bfbfbf;  
+  width: 39%;  
+  height: 3px;  
+  position: absolute;  
+  top: 30px;  
+  z-index: 1;   
+}
+.what-we-do h2:after 
+{
+  content: "";  
+  display: block;  
+  border-top: solid 1px #bfbfbf; 
+  border-bottom: solid 1px #bfbfbf;  
+  width: 39%;  
+  height: 3px;  
+  position: absolute;  
+  top: 30px;  
+  z-index: 1;
+  right: 0px;
+}
+.highlight-red {color: #c2111c;}
+.who-we-are {
+  background: url("../img/h1_bg.jpg") no-repeat scroll 0 0 transparent;
+  height: 75px;
+  line-height: 90px;
+  padding-top: 15px;
+  width: 960px;
+}
+.navbar .nav > li {font-family: 'PT Sans Narrow',sans-serif;font-size: 18px;}
+.base-font {font-family: inherit;}
+
 /*
-.recent-post h3 span {
- background: #fff;
-    padding: 0 20px;
-    position: relative;
-    z-index: 5;
-  }
-  */
+ #main {
+    background: none repeat scroll 0 0 white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.05);
+    float: left;
+    width: 585px;
+    padding: 20px;
+}
+*/
