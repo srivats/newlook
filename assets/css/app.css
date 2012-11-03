@@ -13,12 +13,14 @@ body { }
   background: url(../img/logo.jpg) no-repeat;
   width: 216px;
   height: 62px;
+  margin-left: 50px;
   text-indent: -999px;
 }
+.navbar {margin: 0px;}
 #banner { }
 
 /* Fixed Topbar Navigation */
-body.top-navbar { padding-top: 60px; }
+body.top-navbar { padding-top: 0px; }
 body.admin-bar .navbar-fixed-top { top: 28px; }
 
 
@@ -213,3 +215,49 @@ footer .footer-content .span3{
   width:317px !important;
 }
 */
+
+/* ==========================================================================
+   Home Page
+   ========================================================================== */
+.related-posts .span1 {
+  text-align: center;
+  background-color: #ffffff;
+  border-color:#efefef;
+  margin-right: 10px;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+      border-radius: 5px;
+ -moz-box-shadow: 7px 4px 5px #efefef;
+ -webkit-box-shadow: 7px 4px 5px #efefef;
+ box-shadow: 7px 4px 5px #efefef;
+
+
+ }
+.related-posts .span1 .date,.related-posts .span1 .month {padding:10px;} 
+.related-posts .span1 .date {
+color: #f25c4f;
+}
+#testimonials-slider .carousel-inner  .item div{
+ text-shadow:2px 3px 3px #ffffff;
+}
+.recent-post {position: relative;}
+.recent-post h3:after{
+  content: "";  
+    display: block;  
+    border-top: solid 1px #bfbfbf; 
+    border-bottom: solid 1px #bfbfbf;  
+    width: 60%;  
+    height: 3px;  
+    position: absolute;  
+    top: 30px;  
+    z-index: 1;
+    right:81px;  
+}
+/*
+.recent-post h3 span {
+ background: #fff;
+    padding: 0 20px;
+    position: relative;
+    z-index: 5;
+  }
+  */
