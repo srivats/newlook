@@ -3,7 +3,7 @@
   <li <?php comment_class(); ?>>
     <article id="comment-<?php comment_ID(); ?>">
       <header class="comment-author vcard">
-        <?php echo get_avatar($comment, $size = '32'); ?>
+        <?php echo get_avatar($comment, $size = '48'); ?>
         <?php printf(__('<cite class="fn">%s</cite>', 'roots'), get_comment_author_link()); ?>
         <time datetime="<?php echo comment_date('c'); ?>"><a href="<?php echo htmlspecialchars(get_comment_link($comment->comment_ID)); ?>"><?php printf(__('%1$s', 'roots'), get_comment_date(),  get_comment_time()); ?></a></time>
         <?php edit_comment_link(__('(Edit)', 'roots'), '', ''); ?>
@@ -36,7 +36,7 @@
 
 <?php if (have_comments()) : ?>
   <section id="comments">
-    <h3><?php printf(_n('One Response to &ldquo;%2$s&rdquo;', '%1$s Responses to &ldquo;%2$s&rdquo;', get_comments_number(), 'roots'), number_format_i18n(get_comments_number()), get_the_title()); ?></h3>
+    <h3><?php printf(_n('1 Comment', '%1$s Comments', get_comments_number(), 'roots'), number_format_i18n(get_comments_number())); ?></h3>
 
     <ol class="commentlist">
       <?php wp_list_comments(array('callback' => 'roots_comment')); ?>
@@ -70,7 +70,7 @@
 
 <?php if (comments_open()) : ?>
   <section id="respond">
-    <h3><?php comment_form_title(__('Leave a Reply', 'roots'), __('Leave a Reply to %s', 'roots')); ?></h3>
+    <h3><?php comment_form_title(__('Got Something To Say', 'roots'), __('Leave a Reply to %s', 'roots')); ?></h3>
     <p class="cancel-comment-reply"><?php cancel_comment_reply_link(); ?></p>
     <?php if (get_option('comment_registration') && !is_user_logged_in()) : ?>
       <p><?php printf(__('You must be <a href="%s">logged in</a> to post a comment.', 'roots'), wp_login_url(get_permalink())); ?></p>
@@ -79,15 +79,17 @@
         <?php if (is_user_logged_in()) : ?>
           <p><?php printf(__('Logged in as <a href="%s/wp-admin/profile.php">%s</a>.', 'roots'), get_option('siteurl'), $user_identity); ?> <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="<?php __('Log out of this account', 'roots'); ?>"><?php _e('Log out &raquo;', 'roots'); ?></a></p>
         <?php else : ?>
-          <label for="author"><?php _e('Name', 'roots'); if ($req) _e(' (required)', 'roots'); ?></label>
-          <input type="text" class="text" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?>>
-          <label for="email"><?php _e('Email (will not be published)', 'roots'); if ($req) _e(' (required)', 'roots'); ?></label>
-          <input type="email" class="text" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?>>
-          <label for="url"><?php _e('Website', 'roots'); ?></label>
-          <input type="url" class="text" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3">
+        <div class="controls controls-row">
+          <!--<label for="author"><?php _e('Name', 'roots'); if ($req) _e(' (required)', 'roots'); ?></label> -->
+          <input type="text" class="text span2 pull-left" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?>>
+          <!--<label for="email"><?php _e('Email', 'roots'); if ($req) _e(' (required)', 'roots'); ?></label> -->
+          <input type="email" class="text span2 pull-left" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?>>
+          <!--<label for="url"><?php _e('Website', 'roots'); ?></label>-->
+          <input type="url" class="text span2 pull-left" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22" tabindex="3">
         <?php endif; ?>
+      </div>
         <label for="comment"><?php _e('Comment', 'roots'); ?></label>
-        <textarea name="comment" id="comment" class="input-xlarge" tabindex="4"></textarea>
+        <textarea name="comment" cols="6" rows="6" id="comment" class="input-xxlarge" tabindex="4"></textarea>
         <p><input name="submit" class="btn btn-primary" type="submit" id="submit" tabindex="5" value="<?php _e('Submit Comment', 'roots'); ?>"></p>
         <?php comment_id_fields(); ?>
         <?php do_action('comment_form', $post->ID); ?>
