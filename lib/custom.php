@@ -22,7 +22,7 @@ function get_recent_posts()	{
 	{
     ob_start();
 	   echo '<div class="span8 pull-left recent-post"><h3>Recent Posts</h3>';
-     echo  '<ul class="related-posts">';
+     echo  '<ul class="related-posts unstyled">';
      
 		while(have_posts())
 		{
