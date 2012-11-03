@@ -4,7 +4,7 @@
   <div class="row">
     <div class="span3">
       <h3>Services</h3>
-      <ul class="pull-left">
+      <ul class="pull-left unstyled">
       	<li><a href="#">Website Design</a></li>
       	<li><a href="#">eCommerce Design</a></li>
       	<li><a href="#">Magento Design</a></li>
@@ -13,7 +13,7 @@
     </div>
     <div class="span3">
       <h3>Helpful Links</h3>
-      <ul class="pull-left">    
+      <ul class="pull-left unstyled">    
     	<li><a href="#">About us</a></li>
     	<li><a href="#">Portfolio</a></li>
     	<li><a href="#">Testimonials</a></li>
@@ -27,7 +27,7 @@
     </div>
     <div class="span3">
       <h3>Get Social</h3>
-      <ul class="pull-left">    
+      <ul class="pull-left unstyled">    
       <li><a href="#">Follow us on Facebook</a></li>
       <li><a href="#">Follow us on Twitter</a></li>
       <li><a href="#">Call us from Skype</a></li>
