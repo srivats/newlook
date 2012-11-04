@@ -333,3 +333,6 @@ hr {border-color: #f0f0f0;}
 .commentlist li section.comment {padding: 10px 0px;}
 .avatar {border-radius:50% 50% 50% 50%}
 .comment-author {}
+ul.social-buttons li{ margin-left: 15px; }
+.promotion-container {background: white;border: 1px solid #f0f0f0;padding: 10px; }
+#enjoyed-post {padding: 0px;}
