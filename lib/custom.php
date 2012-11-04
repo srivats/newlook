@@ -154,3 +154,34 @@ function pagination($before = '', $after = '') {
   }
   echo '</ul></nav>'.$after."";
 }
+function get_related_posts()
+{
+  global  $wpdb, $post, $table_prefix;
+  $tags = wp_get_post_tags($post->ID);
+  if ($tags)
+  {
+    $first_tag = $tags[0]->term_id;
+    $args=array(
+      'tag__in' => array($first_tag),
+      'post__not_in' => array($post->ID),
+      'showposts'=>5,
+      'caller_get_posts'=>1
+    );
+    $my_query = new WP_Query($args);
+    if( $my_query->have_posts() )
+    {
+      echo '<ul class="unstyled">';
+      while ($my_query->have_posts()):
+        $my_query->the_post();
+    
+       // echo "<p><a href='".the_permalink()."' rel='bookmark' title='Permanent Link to". the_title_attribute()."'>".the_title()."</a></p>";
+      echo  '<li>'. the_title().'</li>';
+      endwhile;
+      echo '</ul>';
+    }
+    else
+    {
+      echo "No related posts available";
+    }
+  }
+}
