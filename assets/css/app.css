@@ -5,24 +5,32 @@
 body { }
 a:hover{text-decoration: none !important; }
 .center-text{ text-align: center;}
-
+pre
+{
+  border: none;
+  background: transparent;
+  margin: 0px;
+  padding: 0px;
+}
+.home #content #sidebar {display: none;}
 /* =============================================================================
    Header
    ========================================================================== */
-.navbar .brand {
+#banner .container .brand {
   background: url(../img/logo.jpg) no-repeat;
   width: 216px;
-  height: 62px;
+  height: 94px;
   margin-left: 50px;
-  text-indent: -999px;
+ /* text-indent: -999px;*/
 }
 .navbar {margin: 0px;}
 #banner { }
 
 /* Fixed Topbar Navigation */
+/*
 body.top-navbar { padding-top: 0px; }
 body.admin-bar .navbar-fixed-top { top: 28px; }
-
+*/
 
 
 /* ==========================================================================
