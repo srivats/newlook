@@ -1,5 +1,5 @@
-<header id="banner" role="banner">
-  <div class="container">
+<header id="banner" role="banner" class="row">
+  <div class="container span12">
     <a class="brand" href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?></a>
     <nav id="nav-main" role="navigation">
       <?php
