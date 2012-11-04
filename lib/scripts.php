@@ -56,6 +56,11 @@ function pixl_scripts() {
     wp_enqueue_script('highlight_script');
     wp_enqueue_script('colorbox_script');
   }
+  if(is_single())
+  {
+    wp_register_script('socialite', get_template_directory_uri().'/assets/js/social_network/social.js', 'jquery', $ver = false, $in_footer = true);
+  }
+  wp_enqueue_script('socialite');
 
 }
 
