@@ -49,9 +49,12 @@ function pixl_scripts() {
   if(is_single() || is_page())
   {
     wp_register_script('colorbox_script',get_template_directory_uri().'/assets/js/colorbox/colorbox.js');
-    wp_register_style('colorbox_style',get_template_directory_uri().'/assets/css/colorbox/colorbox.css');
-    wp_enqueue_script( 'colorbox_script' );  
+    wp_register_style('highlight_style',get_template_directory_uri().'/assets/css/highlight/tomorrow-night-eighties.css');
+    wp_register_script('highlight_script',get_template_directory_uri().'/assets/js/highlight/highlight.pack.js');
+    wp_enqueue_style('highlight_style');
     wp_enqueue_style('colorbox_style');
+    wp_enqueue_script('highlight_script');
+    wp_enqueue_script('colorbox_script');
   }
 
 }
