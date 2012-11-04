@@ -16,5 +16,9 @@ $(document).ready(function ($) {
 	$('a#colorbox').colorbox();
 	//twitter feeds
 	$('#tweets').tweetable({username: 'pixlpitch', limit: 3});
+	  $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
+
 });
+
+//hljs.initHighlightingOnLoad();
 
