@@ -58,9 +58,11 @@ function pixl_scripts() {
   }
   if(is_single())
   {
-    wp_register_script('socialite', get_template_directory_uri().'/assets/js/social_network/social.js', 'jquery', $ver = false, $in_footer = true);
+    wp_register_script('socialite', get_template_directory_uri().'/assets/js/social_network/social.js', 'jquery', $ver = false, $in_footer = true);   
   }
   wp_enqueue_script('socialite');
+   wp_register_script('validation', get_template_directory_uri().'/assets/js/validate.js', 'jquery', $ver = false, $in_footer = false);
+  wp_enqueue_script('validation');
 
 }
 
