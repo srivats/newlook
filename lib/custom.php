@@ -154,6 +154,12 @@ function pagination($before = '', $after = '') {
   }
   echo '</ul></nav>'.$after."";
 }
+
+/* =============================================================================
+   Related Posts
+=============================================================================
+*/
+
 function get_related_posts()
 {
   global  $wpdb, $post, $table_prefix;
