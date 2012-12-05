@@ -336,3 +336,19 @@ hr {border-color: #f0f0f0;}
 ul.social-buttons li{ margin-left: 15px; }
 .promotion-container {background: white;border: 1px solid #f0f0f0;padding: 10px; }
 #enjoyed-post {padding: 0px;}
+
+label.valid {
+  width: 24px;
+  height: 24px;
+  background: url('../img/valid.png') center center no-repeat;
+  display: block;
+  text-indent: -9999px;
+  color:  green;
+  float: right;
+}
+label.error {
+  font-weight: bold;
+  color: red;
+  padding: 2px 8px;
+  margin-top: 2px;
+}
